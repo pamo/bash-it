@@ -12,6 +12,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias dev="cd ~/Development"
 alias g="git"
+alias gst="g st"
 alias h="history"
 alias j="jobs"
 
@@ -19,16 +20,16 @@ alias hist='history | grep $1' #Requires one input
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-			colorflag="--color"
-    else # OS X `ls`
-					colorflag="-G"
-	fi
+    colorflag="--color"
+else # OS X `ls`
+    colorflag="-G"
+fi
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
+alias ll="ls -laF ${colorflag}"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
@@ -127,7 +128,7 @@ alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-				alias "$method"="lwp-request -m '$method'"
+    alias "$method"="lwp-request -m '$method'"
 done
 
 # Make Grunt print stack traces by default
@@ -149,9 +150,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
-
-# Faster npm for europeans
-command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
 alias comphhvm='hhvm /usr/local/bin/composer'
 
