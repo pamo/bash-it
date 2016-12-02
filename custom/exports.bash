@@ -9,6 +9,7 @@ fi
 export COPYFILE_DISABLE=true
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+export NODENV_ROOT=/usr/local/var/nodenv
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768

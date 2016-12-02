@@ -31,3 +31,4 @@ if [ -f /usr/local/etc/bash_completion ]; then
 	. /usr/local/etc/bash_completion
 fi
 
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
