@@ -1,8 +1,8 @@
 # Set the default editor
 if [ -f /usr/local/bin/subl ]; then
-				export EDITOR='subl -w'
+        export EDITOR='subl -w'
 else
-				export EDITOR="vim"
+        export EDITOR="vim"
 fi
 
 # no ._ files in archives please
@@ -43,3 +43,4 @@ export PIP_VIRTUALENV_BASE=$HOME/.virtualenvs
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+export RUBY_CONFIGURE_OPTS=--disable-install-doc
