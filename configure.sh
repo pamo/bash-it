@@ -38,6 +38,7 @@ bash-it enable alias ${aliases[@]}
 
 plugins=(
   alias-completion
+  autojump
   base
   battery
   dirs
