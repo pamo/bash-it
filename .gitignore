@@ -16,3 +16,4 @@ bats
 enabled/*
 /enabled
 tmp/
+custom/keys.bash
