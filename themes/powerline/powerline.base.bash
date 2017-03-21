@@ -14,6 +14,7 @@ function set_color {
 }
 
 function __powerline_user_info_prompt {
+  set +u
   local user_info=""
   local color=${USER_INFO_THEME_PROMPT_COLOR}
 
