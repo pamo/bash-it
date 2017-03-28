@@ -15,6 +15,9 @@ alias g="git"
 alias gst="g st"
 alias h="history"
 alias hist='history | grep $1' #Requires one input
+alias clean-branches="git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs git branch -d"
+alias sumo-logic="echo 2 | livetail -i $SUMO_LOGIC_COLLECTOR_ACCESS_ID -k $SUMO_LOGIC_COLLECTOR_ACCESS_KEY _source=$APP_NAME"
+alias sumo-logic-exec="echo 2 | livetail -i $SUMO_LOGIC_COLLECTOR_ACCESS_ID -k $SUMO_LOGIC_COLLECTOR_ACCESS_KEY _source=$APP_NAME-exec"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
