@@ -30,8 +30,8 @@ function __powerline_user_info_prompt {
       fi
       ;;
     *)
-      if [[ -n "${SSH_CLIENT}" ]] || [[ -n "${SSH_CONNECTION}" ]]; then
-        user_info="${USER_INFO_SSH_CHAR}${USER}"
+      if [[ -n "${SSH_CLIENT}" ]]; then
+        user_info="${USER_INFO_SSH_CHAR}${USER}@${HOSTNAME}"
       else
         user_info="${USER}"
       fi
