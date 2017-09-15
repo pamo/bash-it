@@ -12,9 +12,7 @@ plugins/custom.plugins.bash
 .*.un~
 bats
 .idea
-enabled/*
-/enabled
-tmp/
+custom/keys.bash
 *.sublime-workspace
 *.sublime-project
-custom/keys.bash
+enabled/*
