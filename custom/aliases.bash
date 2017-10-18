@@ -15,8 +15,8 @@ alias g="git"
 alias gst="g st"
 alias h="history"
 alias hist='history | grep $1' #Requires one input
-alias sumo-logic="echo 2 | livetail -i $SUMO_LOGIC_COLLECTOR_ACCESS_ID -k $SUMO_LOGIC_COLLECTOR_ACCESS_KEY _source=$APP_NAME"
-alias sumo-logic-exec="echo 2 | livetail -i $SUMO_LOGIC_COLLECTOR_ACCESS_ID -k $SUMO_LOGIC_COLLECTOR_ACCESS_KEY _source=$APP_NAME-exec"
+alias sumo-logic='echo 2 | livetail -i $SUMO_LOGIC_COLLECTOR_ACCESS_ID -k $SUMO_LOGIC_COLLECTOR_ACCESS_KEY _source=\"$APP_NAME\"'
+alias sumo-logic-exec='echo 2 | livetail -i $SUMO_LOGIC_COLLECTOR_ACCESS_ID -k $SUMO_LOGIC_COLLECTOR_ACCESS_KEY _source=\"$APP_NAME-exec\"'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -96,7 +96,7 @@ alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew c
 alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew_update; update_brew_npm_gem'
+alias update='brew_update; update_brew_npm_gem'
 
 # Show/hide hidden files in Finder
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"

@@ -3,7 +3,6 @@ about-alias 'rails abbreviations'
 
 # Rails Commands
 alias r='rails'
-alias rg='rails g'
 alias rs='rails s'
 alias rc='rails c'
 alias rn='rails new'
