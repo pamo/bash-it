@@ -14,7 +14,6 @@ function set_color {
 }
 
 function __powerline_user_info_prompt {
-  set +u
   local user_info=""
   local color=${USER_INFO_THEME_PROMPT_COLOR}
 
@@ -23,6 +22,7 @@ function __powerline_user_info_prompt {
       color=${USER_INFO_THEME_PROMPT_COLOR_SUDO}
     fi
   fi
+
   case "${POWERLINE_PROMPT_USER_INFO_MODE}" in
     "sudo")
       if [[ "${color}" = "${USER_INFO_THEME_PROMPT_COLOR_SUDO}" ]]; then
@@ -30,8 +30,8 @@ function __powerline_user_info_prompt {
       fi
       ;;
     *)
-      if [[ -n "${SSH_CLIENT}" ]]; then
-        user_info="${USER_INFO_SSH_CHAR}${USER}@${HOSTNAME}"
+      if [[ -n "${SSH_CLIENT}" ]] || [[ -n "${SSH_CONNECTION}" ]]; then
+        user_info="${USER_INFO_SSH_CHAR}${USER}"
       else
         user_info="${USER}"
       fi
