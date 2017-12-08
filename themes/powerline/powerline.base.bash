@@ -119,6 +119,10 @@ function __powerline_wd_prompt {
   echo "\W|${CWD_THEME_PROMPT_COLOR}"
 }
 
+function __powerline_wd_prompt {
+  echo "\W|${CWD_THEME_PROMPT_COLOR}"
+}
+
 function __powerline_clock_prompt {
   echo "$(date +"${THEME_CLOCK_FORMAT}")|${CLOCK_THEME_PROMPT_COLOR}"
 }
