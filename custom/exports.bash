@@ -1,9 +1,4 @@
-# Set the default editor
-if [ -f /usr/local/bin/subl ]; then
-        export EDITOR='subl -w'
-else
-        export EDITOR="vim"
-fi
+export EDITOR="vim"
 
 # no ._ files in archives please
 export COPYFILE_DISABLE=true
