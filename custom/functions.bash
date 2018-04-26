@@ -346,3 +346,34 @@ tell application "iTerm"
 end tell
 EOD
 }
+
+
+# Git Branches
+function gitb (){
+  USAGE="Story number required, e.g. 12345678"
+
+  if [ $# -eq 0 ]; then
+    echo ${USAGE} >&2
+    exit 1
+  fi
+  if [[ $1 =~ ^[A-Za-z] ]]; then
+    echo ${USAGE} >&2
+    exit 1
+  fi
+
+  git checkout -b bug/${1}
+}
+function gitf (){
+  USAGE="Story number required, e.g. 12345678"
+
+  if [ $# -eq 0 ]; then
+    echo ${USAGE} >&2
+    exit 1
+  fi
+  if [[ $1 =~ ^[A-Za-z] ]]; then
+    echo ${USAGE} >&2
+    exit 1
+  fi
+
+  git checkout -b feature/${1}
+}

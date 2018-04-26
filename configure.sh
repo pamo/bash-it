@@ -51,7 +51,6 @@ plugins=(
   node
   osx-timemachine
   osx
-  rbenv
   ruby
   ssh
   tmux

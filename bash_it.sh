@@ -109,17 +109,10 @@ then
   . "$HOME/.jekyllconfig"
 fi
 
-# BASH_IT_RELOAD_LEGACY is set.
-if ! command -v reload &>/dev/null && [ -n "$BASH_IT_RELOAD_LEGACY" ]; then
-  case $OSTYPE in
-    darwin*)
-      alias reload='source ~/.bash_profile'
-      ;;
-    *)
-      alias reload='source ~/.bashrc'
-      ;;
-  esac
-fi
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 # Disable trap DEBUG on subshells - https://github.com/Bash-it/bash-it/pull/1040
 set +T
+
+eval "$(nodenv init -)"
