@@ -43,3 +43,4 @@ export QTDIR=$HOME/Qt5.5.1/5.5/clang_64/bin
 export PATH=${PATH}:${QTDIR}
 
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history -a"
+export BASH_IT_THEME="cupcake"

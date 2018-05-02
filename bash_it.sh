@@ -114,5 +114,3 @@ source /usr/local/share/chruby/auto.sh
 
 # Disable trap DEBUG on subshells - https://github.com/Bash-it/bash-it/pull/1040
 set +T
-
-eval "$(nodenv init -)"
