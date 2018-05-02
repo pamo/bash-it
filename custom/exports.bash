@@ -3,9 +3,6 @@ export EDITOR="vim"
 # no ._ files in archives please
 export COPYFILE_DISABLE=true
 
-export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
-export NODENV_ROOT=/usr/local/var/nodenv
-
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
@@ -43,4 +40,3 @@ export QTDIR=$HOME/Qt5.5.1/5.5/clang_64/bin
 export PATH=${PATH}:${QTDIR}
 
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history -a"
-export BASH_IT_THEME="cupcake"
