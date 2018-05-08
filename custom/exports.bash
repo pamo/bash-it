@@ -29,13 +29,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 export JBOSS_HOME=/usr/local/opt/jboss-as/libexec
 export PATH=${PATH}:${JBOSS_HOME}/bin
-
-export VIRTUALENV_DISTRIBUTE=true
-export PIP_VIRTUALENV_BASE=$HOME/.virtualenvs
-export PIP_REQUIRE_VIRTUALENV=true
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-
-export RUBY_CONFIGURE_OPTS=--disable-install-doc
 export QTDIR=$HOME/Qt5.5.1/5.5/clang_64/bin
 export PATH=${PATH}:${QTDIR}
 
