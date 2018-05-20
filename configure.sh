@@ -9,29 +9,20 @@ completions=(
   defaults
   dirs
   gem
-  gh
   git
-  gulp
   npm
   rake
-  ssh
-  tmux
-  todo
 )
 bash-it enable completion ${completions[@]}
 
 aliases=(
   bundler
   clipboard
-  fuck
   git
-  heroku
   homebrew
   homebrew-cask
   osx
   rails
-  tmux
-  todo
   vim
 )
 bash-it enable alias ${aliases[@]}
