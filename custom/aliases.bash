@@ -96,7 +96,7 @@ alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew c
 alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='brew_update; update_brew_npm_gem'
+alias update='brew_update'
 
 # Show/hide hidden files in Finder
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
