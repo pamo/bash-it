@@ -385,3 +385,13 @@ function changeMac() {
     sudo ifconfig en0 up
     echo "Your new physical address is $mac"
 }
+
+function cbranch(){
+    export BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+}
+
+function merge-qual(){
+  default="integration/dabronx"
+  qual=${1:-$default}
+  cbranch && git co $qual && git merge $BRANCH --no-edit --no-verify
+}
